@@ -43,7 +43,7 @@ export function Intro() {
   if (phase === 'done') return null
   return (
     <div className={`intro ${phase === 'leave' ? 'is-leaving' : ''}`} role="presentation" onClick={() => setPhase('leave')}>
-      <div className="intro__grid" aria-hidden />
+      <div className="intro__tex" aria-hidden />
       <div className="intro__scan" aria-hidden />
       <div className="intro__stage" aria-hidden>
         <div className="intro__sign">

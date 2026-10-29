@@ -73,7 +73,19 @@ ul, ol { list-style: none; margin: 0; padding: 0; }
 
 /* ---------- seções preto/branco + costura dourada ---------- */
 .sec { position: relative; padding-block: var(--sec-y); isolation: isolate; }
-.sec--dark { background: var(--black); color: var(--white); }
+.sec--dark { background: var(--black); color: var(--white); overflow: clip; }
+/* textura escura com deriva lenta (camada própria, só transform) */
+.sec--dark::after, .intro__tex {
+  content: ''; position: absolute; inset: -8%; z-index: -2; pointer-events: none;
+  background: url('./assets/textura-escura.webp') center / cover no-repeat;
+  animation: texDrift 28s var(--ease-in-out) infinite alternate; will-change: transform;
+}
+.sec--dark:nth-of-type(even)::after { scale: -1 1; animation-duration: 34s; }
+@keyframes texDrift {
+  0% { transform: translate3d(-2%, -1.5%, 0) scale(1.02); }
+  50% { transform: translate3d(1.5%, 1%, 0) scale(1.06); }
+  100% { transform: translate3d(2.5%, -1%, 0) scale(1.03); }
+}
 .sec--light { background: var(--white); color: var(--ink); }
 /* elemento memorável: o traço dourado do logo atravessando cada costura */
 .sec + .sec::before {
@@ -209,9 +221,6 @@ ul, ol { list-style: none; margin: 0; padding: 0; }
 .hero__glow { position: absolute; inset: -20% -10% auto auto; width: 70vw; height: 70vw; max-width: 980px; max-height: 980px; z-index: -1;
   background: radial-gradient(closest-side, rgba(240, 169, 78, 0.22), rgba(196, 128, 43, 0.08) 45%, transparent 70%); animation: breathe 14s var(--ease-in-out) infinite alternate; }
 @keyframes breathe { from { transform: translate3d(0, 0, 0) scale(1); } to { transform: translate3d(-4%, 6%, 0) scale(1.08); } }
-.hero__grid-lines { position: absolute; inset: 0; z-index: -1; opacity: 0.5;
-  background-image: linear-gradient(var(--line-dark) 1px, transparent 1px), linear-gradient(90deg, var(--line-dark) 1px, transparent 1px);
-  background-size: 96px 96px; -webkit-mask-image: radial-gradient(ellipse at 70% 30%, #000 0%, transparent 65%); mask-image: radial-gradient(ellipse at 70% 30%, #000 0%, transparent 65%); }
 .hero__inner { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr); gap: clamp(32px, 5vw, 80px); align-items: stretch; }
 .hero__ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
 .hero__facts { display: flex; gap: clamp(20px, 3vw, 40px); margin-top: 48px; padding-top: 26px; border-top: 1px solid var(--line-dark); }
@@ -529,6 +538,7 @@ ul, ol { list-style: none; margin: 0; padding: 0; }
 
 /* ---------- movimento reduzido: menos e mais suave, não zero ---------- */
 @media (prefers-reduced-motion: reduce) {
+  .sec--dark::after, .intro__tex { animation: none; }
   .btn:hover, .btn-arrow:hover, .cat__cta:hover, .foot__nav a:hover { transform: none !important; }
   html { scroll-behavior: auto; }
   .rv, .rv--up, .rv--photo, .rv--photo > img, .rv--photo > video { transform: none !important; clip-path: none !important; transition: opacity 0.4s ease !important; }
@@ -547,12 +557,9 @@ ul, ol { list-style: none; margin: 0; padding: 0; }
 /* =========================================================
    INTRO — assinatura escrita → maçã → página
    ========================================================= */
-.intro { position: fixed; inset: 0; z-index: 200; background: var(--black); display: grid; place-items: center; overflow: hidden;
+.intro { position: fixed; inset: 0; z-index: 200; background: var(--black); isolation: isolate; display: grid; place-items: center; overflow: hidden;
   clip-path: circle(150% at 50% 50%); transition: clip-path 0.65s var(--ease-in-out), opacity 0.65s ease; cursor: pointer; }
 .intro.is-leaving { clip-path: circle(0% at 50% 50%); opacity: 0.4; pointer-events: none; }
-.intro__grid { position: absolute; inset: 0; opacity: 0; animation: introFade 0.6s ease 0.05s forwards;
-  background-image: linear-gradient(var(--line-dark) 1px, transparent 1px), linear-gradient(90deg, var(--line-dark) 1px, transparent 1px);
-  background-size: 72px 72px; -webkit-mask-image: radial-gradient(ellipse at center, #000 0%, transparent 62%); mask-image: radial-gradient(ellipse at center, #000 0%, transparent 62%); }
 .intro__scan { position: absolute; left: 0; right: 0; top: 50%; height: 1px; opacity: 0;
   background: linear-gradient(90deg, transparent, rgba(240, 169, 78, 0.7), transparent); animation: introScan 1.8s var(--ease-in-out) 0.1s forwards; }
 .intro__stage { position: relative; width: min(560px, 76vw); aspect-ratio: 1176 / 408; display: grid; place-items: center; }

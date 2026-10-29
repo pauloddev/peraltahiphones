@@ -24,3 +24,11 @@ No Vercel: framework **Vite**, build `npm run build`, saída `dist`.
 - **Cores, tipografia e animações:** variáveis no topo de `src/index.css`.
 - **Intro (assinatura → maçã):** `src/components/Intro.tsx`. Toca uma vez por sessão,
   pode ser pulada e não aparece para quem ativa a redução de movimento.
+
+## Capa do link (WhatsApp, Instagram, Facebook)
+
+A capa é `public/og.jpg` (1200×630, logo completo sobre fundo preto).
+O endereço completo da imagem é preenchido no build: no Vercel ele usa o domínio de
+produção automaticamente. Ao conectar um domínio próprio, crie a variável de ambiente
+`SITE_URL` no Vercel (ex.: `https://www.peraltahiphones.com.br`) e faça um novo deploy.
+Se trocar a imagem, mude o `?v=2` em `index.html` para o WhatsApp buscar a nova.

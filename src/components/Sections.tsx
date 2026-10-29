@@ -69,7 +69,6 @@ export function Hero() {
   return (
     <section id="inicio" className="sec sec--dark hero" aria-labelledby="hero-title">
       <div className="hero__glow" aria-hidden />
-      <div className="hero__grid-lines" aria-hidden />
       <div className="wrap hero__inner">
         <div className="hero__copy">
           <Reveal variant="fade" className="eyebrow eyebrow--gold">Peraltah iPhones · Dourados e Maracaju</Reveal>
