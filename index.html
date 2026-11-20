@@ -1,34 +1,426 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <title>Peraltah iPhones | iPhones e Tecnologia em Mato Grosso do Sul</title>
-    <meta name="description" content="Conheça a Peraltah iPhones. Consulte iPhones, produtos Apple e outras categorias de tecnologia. Encontre nossas lojas em Dourados e Maracaju e fale com a equipe pelo WhatsApp." />
-    <meta name="theme-color" content="#0a0908" />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="pt_BR" />
-    <meta property="og:site_name" content="Peraltah iPhones" />
-    <meta property="og:url" content="%SITE_URL%/" />
-    <meta property="og:title" content="Peraltah iPhones | iPhones e Tecnologia em Mato Grosso do Sul" />
-    <meta property="og:description" content="iPhones, ecossistema Apple e tecnologia em três lojas em Dourados e Maracaju. Fale com a equipe pelo WhatsApp." />
-    <meta property="og:image" content="%SITE_URL%/og.jpg?v=2" />
-    <meta property="og:image:secure_url" content="%SITE_URL%/og.jpg?v=2" />
-    <meta property="og:image:type" content="image/jpeg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Logo Peraltah iPhones sobre fundo preto" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="%SITE_URL%/og.jpg?v=2" />
-    <link rel="icon" type="image/png" href="./favicon.png" />
-    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="preload" as="image" href="./img/iphones/laranja.webp" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adjane Calado | Líder Natura & Avon</title>
+<meta name="description" content="Seja uma consultora Natura & Avon com a Líder Adjane Calado. Sem kit inicial, loja online 24h, treinamentos e alta lucratividade.">
+<meta name="theme-color" content="#ff6a00">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Adjane Calado | Líder Natura & Avon">
+<meta property="og:description" content="Seja uma consultora Natura & Avon. Cadastre-se comigo!">
+<meta property="og:url" content="https://adjanecalado.vercel.app/">
+<meta property="og:image" content="https://adjanecalado.vercel.app/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/natura.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --o1:#ff8a00; --o2:#ff6a00; --o3:#e8480a; --o4:#c93a00;
+  --glass:rgba(150,38,0,.22); --glass2:rgba(255,255,255,.14); --bd:rgba(255,255,255,.32);
+  --white:#fff; --soft:rgba(255,255,255,.9);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;background:#e8480a}
+body{
+  font-family:'Poppins',system-ui,sans-serif;color:var(--white);line-height:1.6;position:relative;isolation:isolate;
+  background:linear-gradient(160deg,var(--o1) 0%,var(--o2) 42%,var(--o3) 100%);
+  text-shadow:0 1px 14px rgba(150,40,0,.22);-webkit-tap-highlight-color:transparent;
+}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:url(img/geo.png) center/700px auto repeat;opacity:.85}
+img{display:block;max-width:100%}
+a{color:inherit}
+.container{width:min(1160px,92%);margin:0 auto}
+.serif{font-family:'Playfair Display',serif}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--glass2);border:1px solid var(--bd);border-radius:999px;padding:7px 16px;font-size:.82rem;font-weight:600;backdrop-filter:blur(6px)}
+
+/* Header */
+header{position:relative;z-index:50;background:rgba(200,60,0,.45);backdrop-filter:blur(12px);border-bottom:1px solid var(--bd)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand .lg{background:#fff;border-radius:12px;padding:6px 10px;display:flex;align-items:center}
+.brand .lg img{height:28px;width:auto}
+.brand b{font-family:'Playfair Display',serif;font-size:1.3rem;display:block;line-height:1.1}
+.brand span{display:block;font-size:.66rem;letter-spacing:2.5px;text-transform:uppercase;opacity:.9}
+.menu{display:flex;gap:26px;list-style:none}
+.menu a{text-decoration:none;font-size:.9rem;font-weight:500;opacity:.92}
+.menu a:hover{opacity:1;text-decoration:underline;text-underline-offset:6px}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font-weight:600;
+  border-radius:16px;padding:15px 26px;font-size:.98rem;transition:transform .2s ease,box-shadow .2s ease;white-space:nowrap;text-shadow:none}
+.btn-w{background:#fff;color:var(--o4);box-shadow:0 14px 30px -14px #7a1f00}
+.btn-o{background:var(--glass2);border:1.5px solid #ffffffcc;color:#fff;backdrop-filter:blur(6px)}
+.btn-sm{padding:10px 18px;font-size:.88rem;border-radius:12px}
+@media (hover:hover){.btn:hover{transform:translateY(-2px)}}
+.btn:active{transform:scale(.97)}
+
+/* Hero (foto à esquerda) */
+.hero{position:relative;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:.95fr 1.05fr;align-items:center;gap:64px;padding:70px 0 84px}
+.photo{position:relative;width:min(470px,100%);justify-self:center}
+.photo::before{content:"";position:absolute;inset:-18px -18px 18px 18px;border:2px solid rgba(255,255,255,.55);border-radius:36px;transform:rotate(-4deg)}
+.photo::after{content:"";position:absolute;width:150px;height:150px;right:-34px;top:-30px;background:rgba(255,255,255,.22);clip-path:polygon(0 0,100% 0,100% 100%);}
+.frame{position:relative;z-index:1;border-radius:34px;overflow:hidden;aspect-ratio:4/5;border:6px solid #fff;box-shadow:0 40px 70px -34px #6e1a00}
+.frame img{width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.chip-float{position:absolute;z-index:2;background:#fff;color:var(--o4);border-radius:16px;padding:10px 16px;font-weight:700;font-size:.88rem;box-shadow:0 18px 36px -18px #6e1a00;text-shadow:none;display:flex;align-items:center;gap:8px}
+.chip-float.a{left:-22px;bottom:84px}
+.chip-float.b{right:-22px;bottom:28px}
+.hero h1{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(3rem,6.6vw,5.2rem);line-height:.98;margin-top:18px}
+.hero h1 em{display:block;font-style:normal}
+.hero .role{display:flex;align-items:center;gap:14px;margin-top:16px;font-weight:600;letter-spacing:4px;text-transform:uppercase;font-size:clamp(.85rem,1.4vw,1.05rem)}
+.hero .role::before{content:"";width:46px;height:3px;background:#fff;border-radius:3px}
+.hero p.lead{font-size:1.12rem;margin-top:22px;max-width:540px;color:var(--soft)}
+.hero p.lead strong{color:#fff}
+.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.logos-row{display:inline-flex;align-items:center;gap:18px;background:#fff;border-radius:18px;padding:12px 22px;margin-top:30px;box-shadow:0 18px 36px -22px #6e1a00}
+.logos-row img:first-child{height:44px;width:auto}
+.logos-row img:last-child{height:19px;width:auto}
+.logos-row i{width:1px;height:30px;background:#ffd2b0}
+
+/* Fale comigo – 4 canais */
+.channels{padding:0 0 88px}
+.ch-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.ch{display:flex;flex-direction:column;gap:10px;text-decoration:none;background:var(--glass);border:1px solid var(--bd);border-radius:22px;padding:22px;backdrop-filter:blur(8px);height:100%;transition:transform .25s ease,background .25s ease}
+@media (hover:hover){.ch:hover{transform:translateY(-4px);background:rgba(150,38,0,.34)}}
+.ch .ic{width:48px;height:48px;border-radius:14px;background:#fff;color:var(--o4);display:grid;place-items:center;text-shadow:none}
+.ch small{font-size:.72rem;letter-spacing:2px;text-transform:uppercase;opacity:.85}
+.ch b{font-size:1rem;font-weight:600;word-break:break-word;line-height:1.3}
+.ch b.mail-s{font-size:.86rem;overflow-wrap:anywhere}
+.ch .go{margin-top:auto;font-size:.85rem;font-weight:600;opacity:.95}
+
+/* Seções */
+section.block{padding:92px 0}
+.head{max-width:680px;margin-bottom:46px}
+.head.c{text-align:center;margin-inline:auto}
+.head small{display:block;font-size:.8rem;font-weight:700;letter-spacing:3px;text-transform:uppercase;opacity:.92}
+.head h2{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(2rem,4.2vw,3rem);line-height:1.12;margin-top:10px}
+.head p{margin-top:12px;color:var(--soft)}
+
+/* Vantagens – lista em 2 colunas com ícone */
+.perks{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.perk{display:flex;align-items:center;gap:18px;background:var(--glass);border:1px solid var(--bd);border-radius:20px;padding:18px 22px;backdrop-filter:blur(8px);height:100%}
+.perk .em{flex:0 0 58px;height:58px;border-radius:18px;background:#fff;display:grid;place-items:center;font-size:1.7rem;text-shadow:none}
+.perk h3{font-size:1.05rem;font-weight:600}
+.perk p{font-size:.88rem;opacity:.92;margin-top:2px}
+
+/* Passos – linha do tempo */
+.timeline{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.timeline::before{content:"";position:absolute;left:8%;right:8%;top:38px;height:3px;background:repeating-linear-gradient(90deg,#fff 0 10px,transparent 10px 20px);opacity:.7}
+.tstep{position:relative;text-align:center;padding:0 10px}
+.tstep .n{width:76px;height:76px;margin:0 auto;border-radius:50%;background:#fff;color:var(--o4);display:grid;place-items:center;font-family:'Playfair Display',serif;font-weight:800;font-size:1.8rem;box-shadow:0 18px 34px -18px #6e1a00;text-shadow:none}
+.tstep h3{font-size:1.15rem;margin-top:18px}
+.tstep p{color:var(--soft);font-size:.95rem;margin-top:6px}
+
+/* Cadastro – painel + checklist */
+.reg{display:grid;grid-template-columns:.9fr 1.1fr;gap:28px;align-items:stretch}
+.reg-side{background:#fff;color:var(--o4);border-radius:30px;padding:40px 34px;text-shadow:none;display:flex;flex-direction:column;justify-content:center;box-shadow:0 30px 60px -36px #6e1a00}
+.reg-side small{font-size:.78rem;font-weight:700;letter-spacing:3px;text-transform:uppercase}
+.reg-side h2{font-family:'Playfair Display',serif;font-weight:800;font-size:clamp(1.8rem,3.2vw,2.5rem);line-height:1.12;margin-top:10px;color:#9c2c00}
+.reg-side p{margin-top:12px;color:#7a3b1f}
+.reg-side .bio{display:flex;align-items:center;gap:14px;margin-top:24px;background:linear-gradient(135deg,var(--o1),var(--o3));color:#fff;border-radius:20px;padding:18px 20px;font-weight:600}
+.reg-side .bio i{font-style:normal;font-size:1.8rem}
+.reg-side .bio span small{display:block;font-weight:400;letter-spacing:0;text-transform:none;font-size:.82rem;opacity:.95;margin-top:2px}
+.checks{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.check{display:flex;align-items:center;gap:12px;background:var(--glass);border:1px solid var(--bd);border-radius:16px;padding:14px 16px;font-weight:500;backdrop-filter:blur(8px);height:100%}
+.check::before{content:"✓";flex:0 0 30px;height:30px;border-radius:50%;background:#fff;color:var(--o4);display:grid;place-items:center;font-weight:800;text-shadow:none}
+.check.wide{grid-column:1/-1}
+
+/* Apps */
+.apps-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:900px;margin:0 auto}
+.app{background:var(--glass);border:1px solid var(--bd);border-radius:30px;padding:34px 28px;text-align:center;display:flex;flex-direction:column;align-items:center;height:100%;backdrop-filter:blur(8px)}
+.app .num{font-size:.75rem;font-weight:700;letter-spacing:2.5px;text-transform:uppercase}
+.app-icon{width:128px;height:128px;border-radius:30px;overflow:hidden;margin-top:16px;box-shadow:0 18px 34px -16px #00000066,0 0 0 6px #fff}
+.app-icon img{width:100%;height:100%;object-fit:cover}
+.app h3{font-family:'Playfair Display',serif;font-size:1.5rem;margin-top:24px}
+.app p{font-size:.92rem;margin-top:6px;flex:1;color:var(--soft)}
+.stores{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:22px;width:100%}
+.store{width:170px;display:inline-flex;align-items:center;gap:10px;background:#111;color:#fff;text-decoration:none;border-radius:12px;padding:10px 18px;text-align:left;line-height:1.15;text-shadow:none;transition:transform .2s ease}
+.store small{display:block;font-size:.62rem;opacity:.8;letter-spacing:.5px}
+.store b{font-size:1rem;font-weight:600}
+@media (hover:hover){.store:hover{transform:translateY(-2px)}}
+.tip{max-width:900px;margin:26px auto 0;border:1.5px dashed #ffffffb3;border-radius:18px;padding:18px 22px;text-align:center;font-weight:500;background:var(--glass2)}
+
+/* Chamada final */
+.final{padding:0 0 92px}
+.final-box{display:grid;grid-template-columns:auto 1fr;gap:44px;align-items:center;background:#fff;color:#7a3b1f;border-radius:34px;padding:44px;text-shadow:none;box-shadow:0 40px 80px -40px #5e1500;position:relative;overflow:hidden}
+.final-box::before{content:"";position:absolute;right:-70px;top:-70px;width:240px;height:240px;background:linear-gradient(135deg,var(--o1),var(--o3));clip-path:polygon(0 0,100% 0,100% 100%);opacity:.9}
+.final-photo{width:240px;aspect-ratio:1/1;border-radius:28px;overflow:hidden;border:5px solid #ffd7b8}
+.final-photo img{width:100%;height:100%;object-fit:cover;object-position:center 22%}
+.final-box .script{font-family:'Great Vibes',cursive;font-size:clamp(2.4rem,5vw,3.6rem);line-height:1.05;color:var(--o3)}
+.final-box h3{font-family:'Playfair Display',serif;font-size:1.7rem;color:#9c2c00;margin-top:4px}
+.final-box p{margin-top:10px;max-width:520px}
+.final-box .btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+.btn-or{background:linear-gradient(135deg,var(--o1),var(--o3));color:#fff;box-shadow:0 14px 28px -14px #a83000}
+.btn-ol{background:#fff;color:var(--o4);border:1.5px solid #ffcba3}
+.final-box .mail{margin-top:16px;font-size:.9rem;color:#7a3b1f}
+.final-box .mail b{color:#9c2c00}
+
+footer{background:rgba(120,25,0,.35);border-top:1px solid var(--bd);padding:42px 0 30px;text-align:center;backdrop-filter:blur(8px)}
+.f-logos{display:inline-flex;align-items:center;gap:22px;background:#fff;border-radius:16px;padding:10px 22px}
+.f-logos img:first-child{height:40px;width:auto}
+.f-logos img:last-child{height:17px;width:auto}
+.f-logos i{width:1px;height:28px;background:#ffd2b0}
+footer h4{font-family:'Playfair Display',serif;font-size:1.3rem;margin-top:18px}
+.f-links{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;margin-top:10px;font-size:.92rem}
+.f-links a{text-decoration:none;opacity:.95}
+.f-links a:hover{text-decoration:underline}
+footer .copy{font-size:.78rem;opacity:.85;margin-top:20px}
+
+.float{position:fixed;right:20px;bottom:20px;z-index:60;width:62px;height:62px;border-radius:50%;background:#25d366;display:grid;place-items:center;color:#fff;box-shadow:0 14px 30px -10px #0d6b32;animation:pulse 2.4s infinite;text-shadow:none}
+@keyframes pulse{0%{box-shadow:0 0 0 0 #25d36699}70%{box-shadow:0 0 0 16px #25d36600}100%{box-shadow:0 0 0 0 #25d36600}}
+@media (prefers-reduced-motion:reduce){.float{animation:none}html{scroll-behavior:auto}}
+
+/* Responsivo */
+@media (max-width:960px){
+  .menu{display:none}
+  .hero-grid{grid-template-columns:1fr;text-align:center;padding:44px 0 56px;gap:48px}
+  .hero .role{justify-content:center}
+  .hero .role::before{display:none}
+  .hero p.lead{margin-inline:auto}
+  .hero-ctas{justify-content:center}
+  .photo{width:min(340px,84%)}
+  .chip-float.a{left:-14px}.chip-float.b{right:-14px}
+  .ch-grid{grid-template-columns:1fr 1fr}
+  .perks{grid-template-columns:1fr}
+  .timeline{grid-template-columns:1fr;gap:30px}
+  .timeline::before{display:none}
+  .reg{grid-template-columns:1fr}
+  .final-box{grid-template-columns:1fr;text-align:center;justify-items:center;padding:36px 24px}
+  .final-box .btns{justify-content:center}
+  section.block{padding:70px 0}
+}
+@media (max-width:560px){
+  .nav{height:64px}
+  .brand .lg{display:none}
+  .nav .btn-sm span{display:none}
+  .nav .btn-sm{padding:10px 12px}
+  .hero-ctas .btn{width:100%}
+  .chip-float{font-size:.78rem;padding:8px 12px}
+  .chip-float.a{bottom:70px}
+  .ch{padding:16px}
+  .ch b{font-size:.88rem}
+  .checks{grid-template-columns:1fr}
+  .apps-grid{gap:12px}
+  .app{padding:24px 12px;border-radius:22px}
+  .app-icon{width:90px;height:90px;border-radius:22px}
+  .app h3{font-size:1.1rem}
+  .app p{font-size:.8rem}
+  .stores{flex-direction:column;align-items:center;gap:8px}
+  .store{width:100%;max-width:150px;padding:8px 12px;gap:8px}
+  .store b{font-size:.86rem}
+  .final-photo{width:200px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="container nav">
+    <a class="brand" href="#inicio">
+      <span class="lg"><img src="img/natura.png" alt=""></span>
+      <div><b>Adjane Calado</b><span>Líder Natura &amp; Avon</span></div>
+    </a>
+    <ul class="menu">
+      <li><a href="#contato">Contato</a></li>
+      <li><a href="#vantagens">Vantagens</a></li>
+      <li><a href="#como-funciona">Como começar</a></li>
+      <li><a href="#cadastro">Cadastro</a></li>
+      <li><a href="#aplicativos">Aplicativos</a></li>
+    </ul>
+    <a class="btn btn-w btn-sm" href="https://wa.me/5581994309681?text=Ol%C3%A1%20Adjane!%20Quero%20ser%20consultora%20Natura%20%26%20Avon." target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="#25d366"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.2-.2-.4-.3z"/></svg>
+      <span>Cadastre-se</span>
+    </a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="container hero-grid">
+    <div class="photo">
+      <div class="frame"><img src="img/adjane-hero.jpg" alt="Adjane Calado, Líder Natura e Avon" width="960" height="1200"></div>
+      <div class="chip-float a">🍀 Grupo 25899</div>
+      <div class="chip-float b">📍 Setor Sossego</div>
+    </div>
+
+    <div>
+      <span class="eyebrow">✨ Seja uma consultora Natura &amp; Avon</span>
+      <h1>Adjane <em>Calado</em></h1>
+      <p class="role">Líder Natura &amp; Avon</p>
+      <p class="lead">🚀 <strong>Te instruo a ser uma consultora de sucesso.</strong> Venha para o meu time: sem kit inicial, com loja online 24h, treinamentos e alta lucratividade.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-w" href="https://wa.me/5581994309681?text=Ol%C3%A1%20Adjane!%20Quero%20ser%20consultora%20Natura%20%26%20Avon." target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="#25d366"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.2-.2-.4-.3z"/></svg>
+          Quero ser consultora
+        </a>
+        <a class="btn btn-o" href="#contato">Ver meus canais</a>
+      </div>
+      <div class="logos-row"><img src="img/natura.png" alt="Natura"><i></i><img src="img/avon.png" alt="Avon"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CANAIS -->
+<section class="channels" id="contato">
+  <div class="container">
+    <div class="head c" style="margin-bottom:30px">
+      <small>Fale comigo</small>
+      <h2>Escolha o seu canal</h2>
+    </div>
+    <div class="ch-grid">
+      <a class="ch" href="https://wa.me/5581994309681?text=Ol%C3%A1%20Adjane!%20Gostaria%20de%20tirar%20uma%20d%C3%BAvida." target="_blank" rel="noopener">
+        <span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="#25d366"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.2-.2-.4-.3z"/></svg></span>
+        <small>WhatsApp</small><b>(81) 99430-9681</b><span class="go">Chamar agora →</span>
+      </a>
+      <a class="ch" href="https://www.instagram.com/adjanecalado" target="_blank" rel="noopener">
+        <span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span>
+        <small>Instagram</small><b>@adjanecalado</b><span class="go">Seguir →</span>
+      </a>
+      <a class="ch" href="https://www.tiktok.com/@adjanecalado7" target="_blank" rel="noopener">
+        <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3c.3 2.3 1.7 3.8 4 4v3.1c-1.5 0-2.9-.4-4-1.2v6.2a6 6 0 1 1-6-6c.3 0 .6 0 .9.1v3.2a2.9 2.9 0 1 0 2 2.7V3z"/></svg></span>
+        <small>TikTok</small><b>@adjanecalado7</b><span class="go">Assistir →</span>
+      </a>
+      <a class="ch" href="mailto:adjanecalado8@gmail.com">
+        <span class="ic"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="m4 7 8 6 8-6"/></svg></span>
+        <small>E-mail</small><b class="mail-s">adjanecalado8@gmail.com</b><span class="go">Enviar e-mail →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- VANTAGENS -->
+<section class="block" id="vantagens" style="padding-top:0">
+  <div class="container">
+    <div class="head">
+      <small>Cadastre-se comigo</small>
+      <h2>Por que ser consultora Natura &amp; Avon?</h2>
+      <p>Tudo o que você precisa para começar e crescer, com uma líder ao seu lado em cada passo.</p>
+    </div>
+    <div class="perks">
+      <div class="perk"><div class="em">🎁</div><div><h3>Sem kit inicial</h3><p>Comece sem investir em kit.</p></div></div>
+      <div class="perk"><div class="em">✨</div><div><h3>Produtos inovadores</h3><p>Duas marcas amadas pelos clientes.</p></div></div>
+      <div class="perk"><div class="em">💳</div><div><h3>Conta digital gratuita</h3><p>Receba e gerencie seus ganhos.</p></div></div>
+      <div class="perk"><div class="em">🛍️</div><div><h3>Loja online 24h</h3><p>Venda a qualquer hora, de onde estiver.</p></div></div>
+      <div class="perk"><div class="em">📈</div><div><h3>Plano de crescimento</h3><p>Evolua e aumente seus resultados.</p></div></div>
+      <div class="perk"><div class="em">🎓</div><div><h3>Treinamentos</h3><p>Aprenda a vender com quem entende.</p></div></div>
+      <div class="perk"><div class="em">💰</div><div><h3>Alta lucratividade</h3><p>Ganhos que fazem diferença no mês.</p></div></div>
+      <div class="perk"><div class="em">💝</div><div><h3>Brindes exclusivos</h3><p>Mimos especiais para consultoras.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO COMEÇAR -->
+<section class="block" id="como-funciona" style="padding-top:0">
+  <div class="container">
+    <div class="head c">
+      <small>Passo a passo</small>
+      <h2>Do primeiro contato à primeira venda</h2>
+    </div>
+    <div class="timeline">
+      <div class="tstep"><div class="n">1</div><h3>Chame no WhatsApp</h3><p>Fale comigo pelo (81) 99430-9681 e tire todas as suas dúvidas.</p></div>
+      <div class="tstep"><div class="n">2</div><h3>Faça seu cadastro</h3><p>Eu te ajudo, sem kit inicial e sem complicação.</p></div>
+      <div class="tstep"><div class="n">3</div><h3>Comece a vender</h3><p>Com treinamentos e acompanhamento, desde o primeiro dia.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CADASTRO -->
+<section class="block" id="cadastro" style="padding-top:0">
+  <div class="container reg">
+    <div class="reg-side">
+      <small>Tenha em mãos</small>
+      <h2>Dados necessários para se cadastrar</h2>
+      <p>O cadastro é feito com biometria facial. Separe estas informações antes de começar.</p>
+      <div class="bio"><i>🤳</i><span>Biometria facial<small>Feita na hora, pelo celular</small></span></div>
+    </div>
+    <div class="checks">
+      <div class="check">CPF</div>
+      <div class="check">Nome da candidata</div>
+      <div class="check">CEP</div>
+      <div class="check">Telefone celular</div>
+      <div class="check">E-mail</div>
+      <div class="check">Data de nascimento</div>
+      <div class="check">Gênero</div>
+      <div class="check">Biometria facial</div>
+      <div class="check wide">Confirmação e complemento de endereço</div>
+    </div>
+  </div>
+</section>
+
+<!-- APLICATIVOS -->
+<section class="block" id="aplicativos" style="padding-top:0">
+  <div class="container">
+    <div class="head c">
+      <small>O seu negócio na palma da mão!</small>
+      <h2>Quer se tornar um(a) consultor(a) de sucesso?</h2>
+      <p>✅ Tenha esses aplicativos e sempre disponha um tempo para aprender sobre a função de cada um deles 😉</p>
+    </div>
+    <div class="apps-grid">
+      <div class="app">
+        <span class="num">1° App</span>
+        <div class="app-icon"><img src="img/app-consultoria.jpg" alt="Ícone do app Minha Consultoria" width="512" height="512"></div>
+        <h3>Minha Consultoria</h3>
+        <p>Pedidos, produtos, ciclos e tudo da sua consultoria.</p>
+        <div class="stores">
+          <a class="store" href="https://play.google.com/store/apps/details?id=net.natura.cn" target="_blank" rel="noopener"><svg width="22" height="22" viewBox="0 0 24 24"><path fill="#00d7fe" d="M3.6 2.3 13.3 12l-9.7 9.7a1.5 1.5 0 0 1-.6-1.2V3.5c0-.5.2-.9.6-1.2z"/><path fill="#ffce00" d="m16.6 15.3-3.3-3.3 3.3-3.3 3.8 2.2c1 .6 1 1.6 0 2.2z"/><path fill="#ff3a44" d="M16.6 15.3 13.3 12l-9.7 9.7c.4.4 1 .4 1.6.1z"/><path fill="#00f076" d="M16.6 8.7 5.2 2.2c-.6-.3-1.2-.3-1.6.1l9.7 9.7z"/></svg><span><small>DISPONÍVEL NO</small><b>Google Play</b></span></a>
+          <a class="store" href="https://apps.apple.com/br/app/minha-consultoria/id1069858846" target="_blank" rel="noopener"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9a4.8 4.8 0 0 0-3.8-2c-1.6-.2-3.1.9-3.9.9s-2-.9-3.4-.9a5 5 0 0 0-4.2 2.6c-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6s1.8-.8 3.3-.8 2 .8 3.4.8 2.2-1.3 3-2.5a10.5 10.5 0 0 0 1.4-2.8 4.4 4.4 0 0 1-2.5-4.2zM13.9 5a4.4 4.4 0 0 0 1-3.2 4.5 4.5 0 0 0-2.9 1.5 4.2 4.2 0 0 0-1.1 3.1A3.7 3.7 0 0 0 13.9 5z"/></svg><span><small>BAIXAR NA</small><b>App Store</b></span></a>
+        </div>
+      </div>
+      <div class="app">
+        <span class="num">2° App</span>
+        <div class="app-icon"><img src="img/app-emanapay.jpg" alt="Ícone do app Emana Pay" width="512" height="512"></div>
+        <h3>Emana Pay</h3>
+        <p>Sua conta digital gratuita para receber e pagar.</p>
+        <div class="stores">
+          <a class="store" href="https://play.google.com/store/apps/details?id=net.natura.pay" target="_blank" rel="noopener"><svg width="22" height="22" viewBox="0 0 24 24"><path fill="#00d7fe" d="M3.6 2.3 13.3 12l-9.7 9.7a1.5 1.5 0 0 1-.6-1.2V3.5c0-.5.2-.9.6-1.2z"/><path fill="#ffce00" d="m16.6 15.3-3.3-3.3 3.3-3.3 3.8 2.2c1 .6 1 1.6 0 2.2z"/><path fill="#ff3a44" d="M16.6 15.3 13.3 12l-9.7 9.7c.4.4 1 .4 1.6.1z"/><path fill="#00f076" d="M16.6 8.7 5.2 2.2c-.6-.3-1.2-.3-1.6.1l9.7 9.7z"/></svg><span><small>DISPONÍVEL NO</small><b>Google Play</b></span></a>
+          <a class="store" href="https://apps.apple.com/br/app/emana-pay/id1521558103" target="_blank" rel="noopener"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fff"><path d="M16.4 12.6c0-2.6 2.1-3.8 2.2-3.9a4.8 4.8 0 0 0-3.8-2c-1.6-.2-3.1.9-3.9.9s-2-.9-3.4-.9a5 5 0 0 0-4.2 2.6c-1.8 3.1-.5 7.7 1.3 10.2.9 1.2 1.9 2.6 3.2 2.6s1.8-.8 3.3-.8 2 .8 3.4.8 2.2-1.3 3-2.5a10.5 10.5 0 0 0 1.4-2.8 4.4 4.4 0 0 1-2.5-4.2zM13.9 5a4.4 4.4 0 0 0 1-3.2 4.5 4.5 0 0 0-2.9 1.5 4.2 4.2 0 0 0-1.1 3.1A3.7 3.7 0 0 0 13.9 5z"/></svg><span><small>BAIXAR NA</small><b>App Store</b></span></a>
+        </div>
+      </div>
+    </div>
+    <p class="tip">📲 Baixe os dois aplicativos e aprenda a função de cada um: eles são o seu negócio na palma da mão!</p>
+  </div>
+</section>
+
+<!-- CHAMADA FINAL -->
+<section class="final">
+  <div class="container">
+    <div class="final-box">
+      <div class="final-photo"><img src="img/adjane.jpg" alt="Adjane Calado" width="800" height="800"></div>
+      <div>
+        <div class="script">Venha fazer parte do nosso time</div>
+        <h3>Sou a Adjane, sua líder Natura &amp; Avon</h3>
+        <p>🍀 Grupo 25899 · 📍 Setor Sossego. 🚀 Te instruo a ser uma consultora de sucesso, com orientação, treinamentos e apoio de verdade.</p>
+        <div class="btns">
+          <a class="btn btn-or" href="https://wa.me/5581994309681?text=Ol%C3%A1%20Adjane!%20Quero%20fazer%20parte%20do%20seu%20time." target="_blank" rel="noopener">Quero fazer parte do time</a>
+          <a class="btn btn-ol" href="https://www.instagram.com/adjanecalado" target="_blank" rel="noopener">Ver Instagram</a>
+        </div>
+        <p class="mail">E-mail: <b>adjanecalado8@gmail.com</b></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="f-logos"><img src="img/natura.png" alt="Natura"><i></i><img src="img/avon.png" alt="Avon"></div>
+    <h4>Adjane Calado · Líder Natura &amp; Avon</h4>
+    <div class="f-links">
+      <a href="https://wa.me/5581994309681" target="_blank" rel="noopener">WhatsApp (81) 99430-9681</a>
+      <a href="https://www.instagram.com/adjanecalado" target="_blank" rel="noopener">Instagram @adjanecalado</a>
+      <a href="https://www.tiktok.com/@adjanecalado7" target="_blank" rel="noopener">TikTok @adjanecalado7</a>
+    </div>
+    <p class="copy">🍀 Grupo 25899 · 📍 Setor Sossego · © 2026 Adjane Calado</p>
+  </div>
+</footer>
+
+<a class="float" href="https://wa.me/5581994309681?text=Ol%C3%A1%20Adjane!%20Quero%20ser%20consultora%20Natura%20%26%20Avon." target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.4.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.2-.2-.4-.3z"/></svg>
+</a>
+
+</body>
 </html>
